@@ -119,15 +119,6 @@ def main():
     }
     req = urllib.request.Request(url=url, headers=headers)
     parkruns = get_parkruns(req)
-    # print(
-    #     json.dumps(
-    #         parkruns,
-    #         indent=4,
-    #         default=lambda o: f"{o.isoformat()}Z"
-    #         if isinstance(o, datetime.datetime)
-    #         else o,
-    #     )
-    # )
     store_parkruns(parkruns, args.filename)
 
 
