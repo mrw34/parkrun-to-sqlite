@@ -13,11 +13,11 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/mwoodbri/parkrun-to-sqlite",
     packages=setuptools.find_packages(),
-    # classifiers=[
-    # "Programming Language :: Python :: 3",
-    # "License :: OSI Approved :: MIT License",
-    # "Operating System :: OS Independent",
-    # ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
     python_requires=">=3.6",
     entry_points={
         "console_scripts": ["parkrun-to-sqlite=parkrun_to_sqlite.__main__:main"]
