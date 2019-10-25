@@ -3,7 +3,7 @@
 ```
 pip install parkrun-to-sqlite
 ```
-## Use
+## Run
 ```
 parkrun-to-sqlite XXXXXXX parkruns.db
 ```
