@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="parkrun-to-sqlite",
-    version="0.1",
+    version="0.2",
     author="Mark Woodbridge",
     author_email="mark.woodbridge@cantab.net",
     description="Create a SQLite database containing your parkruns",
@@ -22,4 +22,5 @@ setuptools.setup(
     entry_points={
         "console_scripts": ["parkrun-to-sqlite=parkrun_to_sqlite.__main__:main"]
     },
+    package_data={"parkrun_to_sqlite": ["events.json"]},
 )
