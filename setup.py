@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="parkrun-to-sqlite",
-    version="0.2",
+    version="0.3",
     author="Mark Woodbridge",
     author_email="mark.woodbridge@cantab.net",
     description="Create a SQLite database containing your parkruns",
