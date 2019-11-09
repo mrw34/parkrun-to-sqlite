@@ -90,9 +90,28 @@ def store_parkruns(runs, database):
             conn.execute(
                 "INSERT INTO runs VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 (
-                    run["Event"],
+                    json.dumps(
+                        {
+                            "href": "https://www.parkrun.org.uk/"
+                            + feature["properties"]["eventname"],
+                            "label": run["Event"],
+                        }
+                    )
+                    if feature["properties"]["countrycode"] == 97
+                    else run["Event"],
                     run["Run Date"],
-                    run["Run Number"],
+                    json.dumps(
+                        {
+                            "href": (
+                                "https://www.parkrun.org.uk/"
+                                f"{feature['properties']['eventname']}/results"
+                                f"/weeklyresults/?runSeqNumber={run['Run Number']}"
+                            ),
+                            "label": run["Run Number"],
+                        }
+                    )
+                    if feature["properties"]["countrycode"] == 97
+                    else run["Run Number"],
                     run["Pos"],
                     run["Time"],
                     run["Age Grade"],
