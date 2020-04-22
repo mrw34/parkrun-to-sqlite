@@ -130,7 +130,7 @@ def main():
     args = parser.parse_args()
     url = (
         "https://www.parkrun.org.uk/results/athleteeventresultshistory/"
-        f"?athleteNumber={args.runner_id}&eventNumber=-1"
+        f"?athleteNumber={args.runner_id}&eventNumber=0"
     )
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3)"
