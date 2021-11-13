@@ -128,10 +128,7 @@ def main():
     parser.add_argument("runner_id")
     parser.add_argument("filename")
     args = parser.parse_args()
-    url = (
-        "https://www.parkrun.org.uk/results/athleteeventresultshistory/"
-        f"?athleteNumber={args.runner_id}&eventNumber=0"
-    )
+    url = f"https://www.parkrun.org.uk/parkrunner/{args.runner_id}/all/"
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3)"
         " AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"
